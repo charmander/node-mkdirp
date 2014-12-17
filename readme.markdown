@@ -2,7 +2,7 @@
 
 Like `mkdir -p`, but in node.js!
 
-[![build status](https://secure.travis-ci.org/substack/node-mkdirp.png)](http://travis-ci.org/substack/node-mkdirp)
+[![build status][]][travis]
 
 # example
 
@@ -48,7 +48,7 @@ You can optionally pass in an alternate `fs` implementation by passing in
 
 # install
 
-With [npm](http://npmjs.org) do:
+With [npm][] do:
 
 ```
 npm install mkdirp
@@ -57,3 +57,8 @@ npm install mkdirp
 # license
 
 MIT
+
+
+  [npm]: https://www.npmjs.com/
+  [travis]: https://travis-ci.org/charmander/node-mkdirp
+  [build status]: https://api.travis-ci.org/charmander/node-mkdirp.svg

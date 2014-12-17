@@ -46,25 +46,6 @@ You can optionally pass in an alternate `fs` implementation by passing in
 `opts.fs`. Your implementation should have `opts.fs.mkdir(path, mode, cb)` and
 `opts.fs.stat(path, cb)`.
 
-# usage
-
-This package also ships with a `mkdirp` command.
-
-```
-usage: mkdirp [DIR1,DIR2..] {OPTIONS}
-
-  Create each supplied directory including any necessary parent directories that
-  don't yet exist.
-
-  If the directory already exists, do nothing.
-
-OPTIONS are:
-
-  -m, --mode   If a directory needs to be created, set the mode as an octal
-               permission string.
-
-```
-
 # install
 
 With [npm](http://npmjs.org) do:
@@ -72,14 +53,6 @@ With [npm](http://npmjs.org) do:
 ```
 npm install mkdirp
 ```
-
-to get the library, or
-
-```
-npm install -g mkdirp
-```
-
-to get the command.
 
 # license
 

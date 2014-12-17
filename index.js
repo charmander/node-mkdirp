@@ -1,9 +1,7 @@
 var path = require('path');
 var fs = require('fs');
 
-module.exports = mkdirP.mkdirp = mkdirP.mkdirP = mkdirP;
-
-function mkdirP (p, opts, f, made) {
+function mkdirP(p, opts, f, made) {
     if (typeof opts === 'function') {
         f = opts;
         opts = {};
@@ -50,3 +48,5 @@ function mkdirP (p, opts, f, made) {
         }
     });
 }
+
+module.exports = mkdirP;

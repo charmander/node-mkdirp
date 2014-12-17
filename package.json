@@ -1,8 +1,11 @@
 {
   "name": "less-mkdirp",
   "description": "Recursively mkdir, like `mkdir -p`",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "James Halliday <mail@substack.net> (http://substack.net)",
+  "files": [
+    "index.js"
+  ],
   "main": "./index",
   "keywords": [
     "mkdir",

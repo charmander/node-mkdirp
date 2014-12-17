@@ -9,11 +9,14 @@ Like `mkdir -p`, but in node.js!
 ## pow.js
 
 ```js
-var mkdirp = require('mkdirp');
+var mkdirp = require('less-mkdirp');
 
-mkdirp('/tmp/foo/bar/baz', function (err) {
-    if (err) console.error(err)
-    else console.log('pow!')
+mkdirp('/tmp/foo/bar/baz', function (error) {
+    if (error) {
+        console.error(err);
+    } else {
+        console.log('pow!');
+    }
 });
 ```
 
@@ -28,30 +31,30 @@ And now /tmp/foo/bar/baz exists, huzzah!
 # methods
 
 ```js
-var mkdirp = require('mkdirp');
+var mkdirp = require('less-mkdirp');
 ```
 
-## mkdirp(dir, opts, cb)
+## mkdirp(path, \[options\], callback)
 
-Create a new directory and any necessary subdirectories at `dir` with octal
-permission string `opts.mode`. If `opts` is a non-object, it will be treated as
-the `opts.mode`.
+Create a new directory and any necessary subdirectories at `path` with octal
+permission string `options.mode`. If `options` is a non-object, it will be
+treated as the `options.mode`.
 
-If `opts.mode` isn't specified, it defaults to `0777 & (~process.umask())`.
+If `options.mode` isn't specified, it defaults to `0777 & (~process.umask())`.
 
 `cb(err, made)` fires with the error or the first directory `made`
 that had to be created, if any.
 
 You can optionally pass in an alternate `fs` implementation by passing in
-`opts.fs`. Your implementation should have `opts.fs.mkdir(path, mode, cb)` and
-`opts.fs.stat(path, cb)`.
+`options.fs`. Your implementation should have
+`options.fs.mkdir(path, mode, cb)` and `options.fs.stat(path, cb)`.
 
 # install
 
 With [npm][] do:
 
 ```
-npm install mkdirp
+npm install less-mkdirp
 ```
 
 # license

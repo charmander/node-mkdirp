@@ -5,7 +5,6 @@ var exists = fs.exists || path.exists;
 var test = require('tap').test;
 
 test('race', function (t) {
-    t.plan(6);
     var ps = [ '', 'tmp' ];
 
     for (var i = 0; i < 25; i++) {
